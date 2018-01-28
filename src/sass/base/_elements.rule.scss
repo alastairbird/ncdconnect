@@ -1,0 +1,12 @@
+// ======================================================================
+//  Horizontal rule
+// ======================================================================
+
+hr {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  height: 1px;
+  background: var(--color-darken);
+  border: 0;
+  width: 100%;
+}
