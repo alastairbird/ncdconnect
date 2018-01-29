@@ -3,7 +3,7 @@ const autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var path = require('path');
 
-var BUILD_DIR = path.resolve(__dirname, 'src/build');
+var BUILD_DIR = path.resolve(__dirname, 'build');
 var APP_DIR = path.resolve(__dirname, 'src/app');
 
 var config = {
@@ -62,7 +62,7 @@ var config = {
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
     compress: true,
-    port: 9000,
+    port: process.env.PORT || 9000,
       historyApiFallback: {
         index: 'index.html'
       }
