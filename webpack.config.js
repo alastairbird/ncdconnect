@@ -62,11 +62,12 @@ var config = {
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
     compress: true,
+    host: '0.0.0.0',
     port: process.env.PORT || 9000,
-      historyApiFallback: {
-        index: 'index.html'
-      }
+    historyApiFallback: {
+      index: 'index.html'
     }
+  }
 };
 
 module.exports = config;
