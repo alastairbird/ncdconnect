@@ -1,0 +1,17 @@
+// ======================================================================
+//  Buttons
+// ======================================================================
+
+.button {
+  background: #444;
+  padding: calc(var(--gutter) / 2) var(--gutter);
+  color: #fff;
+  border: 0;
+  stroke: 0;
+  transisiton: background 0.3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background: lighten(#444, 30%);
+  }
+}

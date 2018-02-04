@@ -7,4 +7,9 @@
 .hero {
 	height: 700px;
 	background: transparent url(../../assets/world.png) 100% 0% no-repeat;
+	padding: calc(var(--gutter) * 2) 0;
+}
+
+.heroCopy {
+	max-width: 30%;
 }
