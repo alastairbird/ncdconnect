@@ -46,10 +46,9 @@ var config = {
         ]
       },
       {
-        test: /\.(|jpg|jpeg|png|svg)$/,
+        test: /\.(|jpg|jpeg|png|svg|woff|eot|ttf|)$/,
         loader: 'url-loader',
         options: {
-          name: 'img/[hash].[ext]',
           publicPath: '/',
           limit: 25000,
         },
