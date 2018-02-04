@@ -16,9 +16,14 @@
 	top:0;
 	left:50%;
 	transform: translateX(-50%);
+
+	@media screen and (max-width: 1024px) {
+		position: relative;
+		left: 0;
+		transform: none;
+		height: 81px;
+	}
 }
-
-
 
 .headerNav {
 	float: right;
@@ -50,3 +55,4 @@
 .menuButt + .menuButt {
 	border-left: 1px solid var(--colour-grey-bg);
 }
+
