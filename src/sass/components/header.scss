@@ -36,4 +36,9 @@
 	display: inline-block;
 	padding: var(--gutter);
 	font-size: var(--h1-size);
+	color: var(--colour-accent-main);
+}
+
+.menuButt + .menuButt {
+	border-left: 1px solid var(--colour-grey-bg);
 }
