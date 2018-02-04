@@ -1,0 +1,12 @@
+// ======================================================================
+// Footer component
+// ======================================================================
+@import "../base/settings";
+
+
+.footer {
+	background: var(--colour-dark-bg);
+	height: 30rem;
+	padding: var(--gutter);
+	color: #fff;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 const test = require('../../assets/test.svg');
 import { Link } from 'react-router-dom';
+import { Hero } from '../components/Hero.jsx';
 
 
 export class Home extends React.Component {
@@ -12,9 +13,7 @@ export class Home extends React.Component {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/OtherPage'>OtherPage</Link></li>
         </ul>
-        <p>
-        	
-        </p>
+        <Hero/>
       </div>
     );
   }

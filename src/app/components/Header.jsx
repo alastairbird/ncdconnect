@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const styles = require('../sass/components/header.scss')
-const logoSrc = require('../assets/replace-with-svg.jpg')
+const styles = require('../../sass/components/header.scss')
+const logoSrc = require('../../assets/replace-with-svg.jpg')
 
 export class Header extends React.Component {
 

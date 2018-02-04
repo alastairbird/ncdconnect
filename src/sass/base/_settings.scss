@@ -10,6 +10,8 @@
     --colour-base-text: #444;
     --colour-light-text: #888;
     --colour-grey-bg: #f5f5f5;
+    --colour-dark-bg: #282828;
+
     --colour-accent-main: #22aead; 
     --colour-accent-secondary: #75c7f7;
     --colour-accent-tertiary: #74e160;
@@ -31,8 +33,11 @@
 
     //  Spacing
     // ======================================================================
-
     --gutter: 2.4rem;
+
+    //  Layout
+    // ======================================================================
+    --base-width: 1000px;
 }
 
 
