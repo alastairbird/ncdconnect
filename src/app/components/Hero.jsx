@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from './Button.jsx';
 const styles = require('../../sass/components/hero.scss');
+const testSrc = require('../../assets/test.svg')
+
 
 export class Hero extends React.Component {
 
@@ -27,11 +28,34 @@ export class Hero extends React.Component {
 		    		Sign up today
 		    	</Button>
 		    </p>
-		    <ul>
-	          <li><Link to='/'>Home</Link></li>
-	          <li><Link to='/OtherPage'>OtherPage</Link></li>
-	        </ul>
         </div>
+
+        <ul className={styles.ctaPanel}>
+        	<li className={styles.ctaBlock}>
+        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
+        		<h2>Lorem</h2>
+        		<p>
+        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore.
+        		</p>
+        	</li>
+        	<li className={styles.ctaBlock}>
+        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
+        		<h2>Lorem</h2>
+        		<p>
+        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore.
+        		</p>
+        	</li>
+        	<li className={styles.ctaBlock}>
+        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
+        		<h2>Lorem</h2>
+        		<p>
+        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore.
+        		</p>
+        	</li>
+        </ul>
       </div>
     );
   }

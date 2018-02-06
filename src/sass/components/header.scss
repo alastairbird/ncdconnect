@@ -9,20 +9,17 @@
 	display: flex;
 	justify-content: space-between;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	position: fixed;
+	width: 100%;
 }
 
 .logo {
 	position: absolute;
-	top:0;
-	left:50%;
+	top: 0;
+	left: 50%;
 	transform: translateX(-50%);
-
-	@media screen and (max-width: 1024px) {
-		position: relative;
-		left: 0;
-		transform: none;
-		height: 81px;
-	}
+	width: 180px;
+	height: 103px;
 }
 
 .headerNav {

@@ -7,10 +7,11 @@ import { Footer } from './components/Footer.jsx';
 import { Home } from './pages/Home.jsx';
 import { OtherPage } from './pages/OtherPage.jsx';
 
+const styles = require('../sass/components/main.scss')
 require('../sass/base/base.scss')
 
 const Main = () => (
-  <section>
+  <section className={styles.main}>
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/OtherPage' component={OtherPage}/>
