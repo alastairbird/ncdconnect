@@ -46,7 +46,7 @@ var config = {
         ]
       },
       {
-        test: /\.(|jpg|jpeg|png|svg|woff|eot|ttf|)$/,
+        test: /\.(|jpg|jpeg|png|svg|woff|eot|ttf|ico|)$/,
         loader: 'url-loader',
         options: {
           publicPath: '/',
