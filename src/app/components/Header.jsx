@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
-const styles = require('../../sass/components/header.scss')
-const logoSrc = require('../../assets/ncdc-logo.svg')
+const styles = require('../../sass/components/header.scss');
+const logoSrc = require('../../assets/ncdc-logo.svg');
+const navOpenClass = '';
 
 interface HeaderProps extends React.Component {
 
@@ -16,13 +18,12 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
 
   constructor(props) {
     super(props);
-    this.state = {navigationOpen: false,}
-     this.togglenNavigation = this.togglenNavigation.bind(this);
+    this.state = {navigationOpen: false}
   }
 
-  // = () => not supported....
-  togglenNavigation() {
+  togglenNavigation = () => {
     this.setState({navigationOpen: !this.state.navigationOpen})
+    this.navOpenClass = this.state.navigationOpen ? styles.navOpen : '';
   }
 
   render() {
@@ -38,12 +39,10 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         <div className={styles.menuProfileWrapper}>
           <a className={styles.menuButt}><i className="icon-user__base"></i></a>
         </div>
-        {this.state.navigationOpen && 
-          <nav>
-            <h1>YO</h1>
-          </nav>
-        }
-        
+        <ul className={classNames(styles.nav, this.navOpenClass)}>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/OtherPage'>OtherPage</Link></li>
+        </ul>
       </header>
     );
   }

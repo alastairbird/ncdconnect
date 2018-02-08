@@ -14,10 +14,6 @@ export class Footer extends React.Component {
       <footer className={styles.footer}>
         <small>
          NCDC \\ 2018
-         <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/OtherPage'>OtherPage</Link></li>
-          </ul>
         </small>
       </footer>
     );
