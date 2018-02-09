@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const styles = require('../../sass/components/header.scss');
 const logoSrc = require('../../assets/ncdc-logo.svg');
-const navOpenClass = '';
 
 interface HeaderProps extends React.Component {
 
@@ -23,7 +22,6 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
 
   togglenNavigation = () => {
     this.setState({navigationOpen: !this.state.navigationOpen})
-    this.navOpenClass = this.state.navigationOpen ? styles.navOpen : '';
   }
 
   render() {
@@ -39,7 +37,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         <div className={styles.menuProfileWrapper}>
           <a className={styles.menuButt}><i className="icon-user__base"></i></a>
         </div>
-        <ul className={classNames(styles.nav, this.navOpenClass)}>
+        <ul className={classNames(styles.nav, this.state.navigationOpen ? styles.navOpen : null)}>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/OtherPage'>OtherPage</Link></li>
         </ul>

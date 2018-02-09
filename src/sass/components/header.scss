@@ -81,3 +81,11 @@
 .navOpen {
 	left: 0;
 }
+
+
+@media screen and (max-width: 800px){
+	.logo {
+		height: 81px;
+		width: 142px;	
+	}
+}

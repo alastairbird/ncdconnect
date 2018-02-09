@@ -5,7 +5,8 @@
 
 
 .hero {
-	height: 700px;
+	height: auto;
+	padding-bottom: calc(var(--gutter) * 2);
 	background: transparent url(../../assets/world.png) 100% 0% no-repeat;
 }
 
@@ -34,9 +35,23 @@
 	background: #fff;
 	text-align: center;
 	padding: var(--gutter);
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .ctaIcon {
 	width: 100px;
 	height: 100px;
+}
+
+@media screen and (max-width: 800px){
+	.ctaBlock {
+		width: 100%;
+		margin: 0 0 var(--gutter);
+	}
+
+	.ctaPanel {
+		flex-wrap: wrap;
+	}
+
+ 
 }
