@@ -53,6 +53,16 @@
 	border-left: 1px solid var(--colour-grey-bg);
 }
 
+.menuButtOpen {
+	background: #3b3b3b;
+	transition: background 0.3s ease-in, color 0.3s ease-in;
+
+	&:hover {
+		background: #3b3b3b;
+		opacity: 1;
+		color: #fff;
+	}
+}
 
 // Navigation
 // ======================================================================

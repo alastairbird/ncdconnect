@@ -28,7 +28,13 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     return (
       <header className={styles.header}>
         <div className={styles.menuSearchWrapper}>
-          <a onClick={this.togglenNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>
+          {!this.state.navigationOpen &&
+            <a onClick={this.togglenNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>
+          }
+          {this.state.navigationOpen &&
+            <a onClick={this.togglenNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>
+          }
+
           <a className={styles.menuButt}><i className="icon-magnifying-glass__base"></i></a>
         </div>
 
