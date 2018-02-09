@@ -12,7 +12,7 @@
 
 .heroCopy {
 	max-width: var(--base-regular-width);
-	margin: calc(var(--gutter) * 3) auto calc(var(--gutter) * 3) auto;
+	margin: 0 auto calc(var(--gutter) * 3) auto;
 
 	p {
 		max-width: 50%;
