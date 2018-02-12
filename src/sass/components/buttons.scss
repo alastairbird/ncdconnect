@@ -3,7 +3,7 @@
 // ======================================================================
 
 .button {
-  background: #444;
+  background: var(--colour-accent-quaternary);
   padding: calc(var(--gutter) / 2) var(--gutter);
   color: #fff;
   border: 0;

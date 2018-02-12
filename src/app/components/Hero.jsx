@@ -1,7 +1,11 @@
 import React from 'react';
 import { Button } from './Button.jsx';
 const styles = require('../../sass/components/hero.scss');
-const testSrc = require('../../assets/test.svg')
+const calSrc = require('../../assets/calendar.svg')
+const chatSrc = require('../../assets/chat.svg')
+const newsSrc = require('../../assets/newspaper.svg')
+
+
 
 
 export class Hero extends React.Component {
@@ -32,24 +36,24 @@ export class Hero extends React.Component {
 
         <ul className={styles.ctaPanel}>
         	<li className={styles.ctaBlock}>
-        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
-        		<h2>Lorem</h2>
+        		<img className={styles.ctaIcon} src={chatSrc} alt="" />
+        		<h2 className={styles.subHeadOne}>Connect</h2>
         		<p>
         			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore.
         		</p>
         	</li>
         	<li className={styles.ctaBlock}>
-        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
-        		<h2>Lorem</h2>
+        		<img className={styles.ctaIcon} src={newsSrc} alt="" />
+        		<h2 className={styles.subHeadTwo}>Opportunities</h2>
         		<p>
         			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore.
         		</p>
         	</li>
         	<li className={styles.ctaBlock}>
-        		<img className={styles.ctaIcon} width="100" height="100" src={testSrc} alt="" />
-        		<h2>Lorem</h2>
+        		<img className={styles.ctaIcon} src={calSrc} alt="" />
+        		<h2 className={styles.subHeadThree}>Events</h2>
         		<p>
         			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore.

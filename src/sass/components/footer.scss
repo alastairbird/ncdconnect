@@ -35,6 +35,11 @@
 	}
 }
 
+.botLinks {
+	display: block;
+	padding-top: calc(var(--gutter) * 3);
+}
+
 
 @include media("portrait-tablet-up") {
   .nav{

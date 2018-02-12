@@ -42,8 +42,22 @@
 }
 
 .ctaIcon {
-	width: 100px;
-	height: 100px;
+	width: auto;
+	display: block;
+	height: 150px;
+	margin: var(--gutter) auto;
+}
+
+.subHeadOne {
+	color: var(--colour-accent-secondary);
+}
+
+.subHeadTwo {
+	color: var(--colour-accent-tertiary);
+}
+
+.subHeadThree {
+	color: var(--colour-accent-quaternary);
 }
 
 @include media("portrait-tablet-up") {
