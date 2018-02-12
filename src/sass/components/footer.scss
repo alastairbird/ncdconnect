@@ -2,11 +2,47 @@
 // Footer component
 // ======================================================================
 @import "../base/settings";
-
+@import "../base/tools";
 
 .footer {
 	background: var(--colour-dark-bg);
-	height: 30rem;
-	padding: var(--gutter);
+	height: auto;
+	padding: calc(var(--gutter) * 2) var(--gutter);
 	color: #fff;
+}
+
+.logo {
+	width: 130px;
+	height: 58px;
+	display: block;
+}
+
+.nav {
+	width: 100%;
+	height: auto;
+	display: block;
+	list-style: none;
+	padding: var(--gutter) 0 0 0;
+	margin: var(--gutter) 0 0 0;
+	border-top: 2px solid #fff;
+
+	li {
+		margin-bottom: calc(var(--gutter) / 2);
+	}
+
+	li a {
+		color: #fff;
+	}
+}
+
+
+@include media("portrait-tablet-up") {
+  .nav{
+  	max-width: var(--base-small-width);
+
+  	li {
+  		display: inline-block;
+  		margin: 0 var(--gutter) 0 0;
+  	}
+  }
 }

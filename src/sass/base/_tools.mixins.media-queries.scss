@@ -1,0 +1,77 @@
+//  Media queries
+// ------------------------------------------------------------------
+//  Usage:
+/*
+    @import "../../sass/tools";
+    @include media("tablet-up") {
+      
+    }
+*/
+// -----------------------------------------------
+@mixin media($breakpoint) {
+
+  //  Breakpoints
+  //  https://mydevice.io/devices/
+  //  No support for CSS vars at this time
+  // ------------------------------------------------------------------
+
+  $tiny-mobile-up: 360px;
+  $small-mobile-up: 430px;
+  $mobile-up: 540px;
+  $large-mobile-up: 720px;
+  $portrait-tablet-up: 768px;
+  $tablet-up: 1024px;
+  $large-tablet-up: 1200px;
+  $laptop-up: 1366px;
+  $desktop-up: 1440px;
+  $large-desktop-up: 1600px;
+  $massive-desktop-up: 2000px;
+
+	@if $breakpoint == "massive-desktop-up" {
+		@media only screen and (min-width: $massive-desktop-up) { //2000px
+			@content;
+		}
+  } @else if $breakpoint == "large-desktop-up" {
+    @media only screen and (min-width: $large-desktop-up) { //1600px
+      @content;
+    }
+  } @else if $breakpoint == "desktop-up" {
+    @media only screen and (min-width: $desktop-up) { //1440px
+      @content;
+    }
+	} @else if $breakpoint == "laptop-up" {
+    @media only screen and (min-width: $laptop-up) { //1366px
+      @content;
+    }
+  } @else if $breakpoint == "large-tablet-up" {
+    @media only screen and (min-width: $large-tablet-up) { //1200px
+      @content;
+    }
+  } @else if $breakpoint == "tablet-up" {
+    @media only screen and (min-width: $tablet-up) { //1024px
+      @content;
+    }
+  } @else if $breakpoint == "portrait-tablet-up" {
+    @media only screen and (min-width: $portrait-tablet-up) { //768px
+      @content;
+    }
+  } @else if $breakpoint == "large-mobile-up" {
+    @media only screen and (min-width: $large-mobile-up) { //720px
+      @content;
+    }
+  } @else if $breakpoint == "mobile-up" {
+    @media only screen and (min-width: $mobile-up) { //540px
+      @content;
+    }
+  } @else if $breakpoint == "small-mobile-up" {
+    @media only screen and (min-width: $small-mobile-up) { //430px
+      @content;
+    }
+  } @else if $breakpoint == "tiny-mobile-up" {
+    @media only screen and (min-width: $tiny-mobile-up) { //360px
+      @content;
+    }
+  } @else {
+		@warn "#{$breakpoint} is not a valid breakpoint"
+	}
+}
