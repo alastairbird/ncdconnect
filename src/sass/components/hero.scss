@@ -39,12 +39,13 @@
 	padding: var(--gutter);
 	margin: 0 0 var(--gutter);
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+	font-size: 1.8rem;
 }
 
 .ctaIcon {
 	width: auto;
 	display: block;
-	height: 150px;
+	height: 130px;
 	margin: var(--gutter) auto;
 }
 
@@ -62,6 +63,6 @@
 
 @include media("portrait-tablet-up") {
 	.ctaBlock {
-		width: 32%;
+		width: 30%;
 	}
 }

@@ -9,7 +9,7 @@ export class Connect extends React.Component {
 
   render() {
     return (
-      <div className="content-wrapper">
+      <div className="contentWrapper__base">
         <h1>Connect</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

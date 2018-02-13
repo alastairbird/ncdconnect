@@ -9,7 +9,7 @@ export class Events extends React.Component {
 
   render() {
     return (
-      <div className="content-wrapper">
+      <div className="contentWrapper__base">
         <h1>Events</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
