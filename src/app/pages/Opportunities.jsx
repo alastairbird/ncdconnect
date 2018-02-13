@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export class OtherPage extends React.Component {
+export class Opportunities extends React.Component {
 
   constructor(props) {
     super(props);
@@ -9,8 +9,8 @@ export class OtherPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>OtherPage</h1>
+      <div className="content-wrapper">
+        <h1>Opportunities</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -5,7 +5,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Header } from './components/Header.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Home } from './pages/Home.jsx';
-import { OtherPage } from './pages/OtherPage.jsx';
+import { Connect } from './pages/Connect.jsx';
+import { Opportunities } from './pages/Opportunities.jsx';
+import { Events } from './pages/Events.jsx';
+import { About } from './pages/About.jsx';
+import { Contact } from './pages/Contact.jsx';
 
 const styles = require('../sass/components/main.scss')
 require('../sass/base/base.scss')
@@ -14,7 +18,11 @@ const Main = () => (
   <section className={styles.main}>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/OtherPage' component={OtherPage}/>
+      <Route path='/Connect' component={Connect}/>
+      <Route path='/Opportunities' component={Opportunities}/>
+      <Route path='/Events' component={Events}/>
+      <Route path='/About' component={About}/>
+      <Route path='/Contact' component={Contact}/>
     </Switch>
   </section>
 )

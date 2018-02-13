@@ -9,12 +9,14 @@
 	height: auto;
 	padding: calc(var(--gutter) * 2) var(--gutter);
 	color: #fff;
+	text-align: center;
 }
 
 .logo {
 	width: 130px;
 	height: 58px;
 	display: block;
+	margin: 0 auto;
 }
 
 .nav {
@@ -22,9 +24,10 @@
 	height: auto;
 	display: block;
 	list-style: none;
-	padding: var(--gutter) 0 0 0;
-	margin: var(--gutter) 0 0 0;
-	border-top: 2px solid #fff;
+	padding: calc(var(--gutter) * 2) 0 calc(var(--gutter) * 2) 0;
+	margin: calc(var(--gutter) * 2) auto calc(var(--gutter) * 2) auto;
+	border-top: 2px solid var(--colour-darkish);
+	border-bottom: 2px solid var(--colour-darkish);
 
 	li {
 		margin-bottom: calc(var(--gutter) / 2);
@@ -37,7 +40,6 @@
 
 .botLinks {
 	display: block;
-	padding-top: calc(var(--gutter) * 3);
 }
 
 

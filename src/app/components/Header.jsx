@@ -45,7 +45,11 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         </div>
         <ul className={classNames(styles.nav, this.state.navigationOpen ? styles.navOpen : null)}>
           <li><Link to='/'>Home</Link></li>
-          <li><Link to='/OtherPage'>OtherPage</Link></li>
+          <li><Link to='/Connect'>Connect</Link></li>
+          <li><Link to='/Opportunities'>Opportunities</Link></li>
+          <li><Link to='/Events'>Events</Link></li>
+          <li><Link to='/About'>About</Link></li>
+          <li><Link to='/Contact'>Contact</Link></li>
         </ul>
       </header>
     );
