@@ -45,7 +45,7 @@ $toolbarHeight: 80px;
 
 .menuButt {
 	display: inline-block;
-	padding: var(--gutter);
+	padding: var(--gutter) calc(var(--gutter) / 2);
 	font-size: var(--h2-size);
 	color: var(--colour-accent-main);
 	transition: background 0.3s ease-in, color 0.3s ease-in;
@@ -57,11 +57,10 @@ $toolbarHeight: 80px;
 }
 
 .menuButtOpen {
-	background: var(--colour-dark-bg);
-	transition: background 0.3s ease-in, color 0.3s ease-in;
+	color: var(--colour-accent-quaternary);
 
 	&:hover {
-		color: var(--colour-accent-main);
+		color: var(--colour-accent-quaternary);
 	}
 }
 
@@ -86,6 +85,11 @@ $toolbarHeight: 80px;
 
 	li a {
 		color: #fff;
+		font-size: 27px;
+	}
+
+	li a:hover {
+		color: var(--colour-accent-main);
 		font-size: 27px;
 	}
 }
@@ -119,6 +123,19 @@ $toolbarHeight: 80px;
 
 
 @include media("tablet-up") {
+
+	.menuButt { 
+		padding: var(--gutter);
+	}
+
+	.menuButtOpen {
+		background: var(--colour-dark-bg);
+		transition: background 0.3s ease-in, color 0.3s ease-in;
+
+		&:hover {
+			color: var(--colour-accent-main);
+		}
+	}
 
 	.logo {
 		width: 180px;

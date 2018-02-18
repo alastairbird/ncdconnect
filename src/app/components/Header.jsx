@@ -74,12 +74,12 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
 
         {/*Navigation*/}
         <ul className={classNames(styles.nav, this.state.navigationOpen ? styles.navOpen : null)}>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/Connect'>Connect</Link></li>
-          <li><Link to='/Opportunities'>Opportunities</Link></li>
-          <li><Link to='/Events'>Events</Link></li>
-          <li><Link to='/About'>About</Link></li>
-          <li><Link to='/Contact'>Contact</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/'>Home</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/Connect'>Connect</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/Opportunities'>Opportunities</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/Events'>Events</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/About'>About</Link></li>
+          <li><Link onClick={this.togglenNavigation} to='/Contact'>Contact</Link></li>
         </ul>
       </header>
     );
