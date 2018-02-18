@@ -2,15 +2,21 @@
 // Header component
 // ======================================================================
 @import "../base/settings";
+@import "../base/tools";
 
 .header {
-	padding: 0;
-	background: #fff;
-	display: flex;
-	justify-content: space-between;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 	position: fixed;
 	width: 100%;
+}
+
+.headerWrapper {
+	background: #fff;
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	width: 100%;
+	z-index: 1;
 }
 
 .logo {
@@ -18,8 +24,9 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 180px;
-	height: 103px;
+	height: 81px;
+	width: 142px;	
+	z-index: 2;
 }
 
 .headerNav {
@@ -39,44 +46,37 @@
 	padding: var(--gutter);
 	font-size: var(--h2-size);
 	color: var(--colour-accent-main);
-	transition: opacity 0.3s ease-in, background 0.3s ease-in, color 0.3s ease-in;
+	transition: background 0.3s ease-in, color 0.3s ease-in;
 
 	&:hover {
 		cursor: pointer;
-		opacity: 0.8;
-		background: var(--colour-grey-bg);
 		color: var(--colour-base-text);
 	}
 }
 
-.menuButt + .menuButt {
-	border-left: 1px solid var(--colour-grey-bg);
-}
-
 .menuButtOpen {
-	background: #3b3b3b;
+	background: var(--colour-dark-bg);
 	transition: background 0.3s ease-in, color 0.3s ease-in;
 
 	&:hover {
-		background: #3b3b3b;
-		opacity: 1;
-		color: #fff;
+		color: var(--colour-accent-main);
 	}
 }
 
 // Navigation
 // ======================================================================
 .nav {
-	width: 250px;
+	width: 100%;
 	height: 100vh;
 	display: block;
 	position: absolute;
-	left: -250px;
+	left: 0;
 	top: 81px;
-	background: rgba(40, 40, 40, 0.9);
+	background: var(--colour-dark-bg);
 	padding: var(--gutter);
-	transition: left 0.3s ease-in;
-	will-change: left;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease-in;
+	will-change: transform;
 
 	li {
 		list-style: none;
@@ -89,13 +89,41 @@
 }
 
 .navOpen {
-	left: 0;
+	transform: translateX(0);
 }
 
 
-@media screen and (max-width: 800px){
+// Navigation
+// ======================================================================
+.searchBar {
+	width: 100%;
+	height: auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background: var(--colour-dark-bg);
+	padding: var(--gutter);
+	transform: translateY(-100%);
+	transition: transform 0.3s ease-in;
+	will-change: transform;
+	z-index: 0;
+}
+
+.searchOpen {
+	transform: translateY(100%);
+}
+
+
+@include media("tablet-up") {
+
 	.logo {
-		height: 81px;
-		width: 142px;	
+		width: 180px;
+		height: 103px;	
+	}
+
+	.nav {
+		width: 300px;
 	}
 }
