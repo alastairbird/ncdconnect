@@ -9,11 +9,10 @@ body {
 	color: var(--colour-base-text);
 }
 
-a,
-a:visited {
-	color: var(--colour-base-text);
-	text-decoration: none;
+a {
+  text-decoration: none;
 }
+
 
 h1, h2, h3, h4 {
   font-weight: var(--heading-weight);

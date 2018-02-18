@@ -5,4 +5,10 @@
 .contentWrapper {
 	max-width: var(--base-regular-width);
 	margin: 0 auto;
+
+	a,
+	a:visited {
+		color: var(--colour-base-text);
+		text-decoration: none;
+	}
 }

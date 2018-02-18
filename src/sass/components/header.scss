@@ -10,6 +10,16 @@ $toolbarHeight: 80px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 	position: fixed;
 	width: 100%;
+
+	a,
+	a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--colour-accent-quaternary);
+	}
 }
 
 .headerWrapper {
@@ -31,18 +41,9 @@ $toolbarHeight: 80px;
 	z-index: 2;
 }
 
-.headerNav {
-	float: right;
-	margin: 0;
-	padding: 0;
-	list-style: none;
 
-	li {
-		display: inline-block;
-		margin-left: 2em;
-	}
-}
-
+// Menu Butts
+// ======================================================================
 .menuButt {
 	display: inline-block;
 	padding: var(--gutter) calc(var(--gutter) / 2);
@@ -56,12 +57,26 @@ $toolbarHeight: 80px;
 	}
 }
 
+a.menuButt {
+	color: var(--colour-accent-main);
+}
+
 .menuButtOpen {
 	color: var(--colour-accent-quaternary);
 
 	&:hover {
 		color: var(--colour-accent-quaternary);
 	}
+}
+
+.menuProfileWrapper {
+	display: none;
+}
+
+.menuSearchWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 // Navigation
@@ -81,16 +96,11 @@ $toolbarHeight: 80px;
 
 	li {
 		list-style: none;
+		font-size: var(--h2-size);
 	}
 
 	li a {
 		color: #fff;
-		font-size: 27px;
-	}
-
-	li a:hover {
-		color: var(--colour-accent-main);
-		font-size: 27px;
 	}
 }
 
@@ -99,8 +109,9 @@ $toolbarHeight: 80px;
 }
 
 
-// Navigation
+// Search bar + Profile bar
 // ======================================================================
+.profileBar,
 .searchBar {
 	width: 100%;
 	height: auto;
@@ -117,7 +128,13 @@ $toolbarHeight: 80px;
 	z-index: 0;
 }
 
-.searchOpen {
+.profileBar {
+	right: 0;
+	left: auto;
+}
+
+.profileBarOpen,
+.searchBarOpen {
 	transform: translateY($toolbarHeight);
 }
 
@@ -137,6 +154,16 @@ $toolbarHeight: 80px;
 		}
 	}
 
+	.profileBar,
+	.menuSearchWrapper {
+		width: auto;
+		display: block;
+	}
+	
+	.menuProfileWrapper {
+		display: block;
+	}
+
 	.logo {
 		width: 180px;
 		height: 103px;	
@@ -147,6 +174,6 @@ $toolbarHeight: 80px;
 	}
 
 	.searchBar input {
-		width: 30%;
+		width: 25%;
 	}
 }

@@ -13,6 +13,7 @@ interface HeaderProps extends React.Component {
 interface HeaderState extends React.Component {
   navigationOpen: boolean;
   searchBarOpen: boolean;
+  profileBarOpen: boolean;
 }
 
 export class Header extends React.Component<HeaderProps, HeaderState> {
@@ -21,29 +22,47 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     super(props);
     this.state = {
       navigationOpen: false,
-      searchBarOpen: false
+      searchBarOpen: false,
+      profileBarOpen: false
     }
   }
 
-  togglenNavigation = () => {
+  toggleNavigation = () => {
     this.setState({
+      navigationOpen: !this.state.navigationOpen,
       searchBarOpen: false,
-      navigationOpen: !this.state.navigationOpen
+      profileBarOpen: false
     })
   }
 
-  togglenSearchBar = () => {
+  toggleSearchBar = () => {
     this.setState({
+      navigationOpen: false,
       searchBarOpen: !this.state.searchBarOpen,
-      navigationOpen: false
+      profileBarOpen: false
+    })
+  }
+
+  toggleProfileBar = () => {
+    this.setState({
+      navigationOpen: false,
+      searchBarOpen: false,
+      profileBarOpen: !this.state.profileBarOpen
     })
   }
 
   render() {
     return (
       <header className={styles.header}>
+
+        {/*Profile bar*/}
+        <div className={classNames(styles.profileBar, this.state.profileBarOpen ? styles.profileBarOpen : null)}>
+          <Link onClick={this.toggleNavigation} to='/'>Register</Link>
+          <Link onClick={this.toggleNavigation} to='/'>Logout</Link>
+        </div>
+        
         {/*Search bar*/}
-        <div className={classNames(styles.searchBar, this.state.searchBarOpen ? styles.searchOpen : null)}>
+        <div className={classNames(styles.searchBar, this.state.searchBarOpen ? styles.searchBarOpen : null)}>
           <input type="text" placeholder="Search..."/>
           <Button>
             Search
@@ -54,12 +73,12 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
           {/*Toggles*/}
           <div className={styles.menuSearchWrapper}>
             {!this.state.navigationOpen &&
-              <a onClick={this.togglenNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>
+              <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>
             }
             {this.state.navigationOpen &&
-              <a onClick={this.togglenNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>
+              <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>
             }
-            <a  onClick={this.togglenSearchBar} className={classNames(styles.menuButt, this.state.searchBarOpen ? styles.menuButtOpen : null)}><i className="icon-magnifying-glass__base"></i></a>
+            <a onClick={this.toggleSearchBar} className={classNames(styles.menuButt, this.state.searchBarOpen ? styles.menuButtOpen : null)}><i className="icon-magnifying-glass__base"></i></a>
           </div>
 
           {/*Logo*/}
@@ -67,19 +86,19 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
 
           {/*Profile toggle*/}
           <div className={styles.menuProfileWrapper}>
-            <a className={styles.menuButt}><i className="icon-user__base"></i></a>
+            <a onClick={this.toggleProfileBar} className={classNames(styles.menuButt, this.state.profileBarOpen ? styles.menuButtOpen : null)}><i className="icon-user__base"></i></a>
           </div>
         </div>
        
 
         {/*Navigation*/}
         <ul className={classNames(styles.nav, this.state.navigationOpen ? styles.navOpen : null)}>
-          <li><Link onClick={this.togglenNavigation} to='/'>Home</Link></li>
-          <li><Link onClick={this.togglenNavigation} to='/Connect'>Connect</Link></li>
-          <li><Link onClick={this.togglenNavigation} to='/Opportunities'>Opportunities</Link></li>
-          <li><Link onClick={this.togglenNavigation} to='/Events'>Events</Link></li>
-          <li><Link onClick={this.togglenNavigation} to='/About'>About</Link></li>
-          <li><Link onClick={this.togglenNavigation} to='/Contact'>Contact</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/'>Home</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/Connect'>Connect</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/Opportunities'>Opportunities</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/Events'>Events</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/About'>About</Link></li>
+          <li><Link onClick={this.toggleNavigation} to='/Contact'>Contact</Link></li>
         </ul>
       </header>
     );
