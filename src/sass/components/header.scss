@@ -4,6 +4,8 @@
 @import "../base/settings";
 @import "../base/tools";
 
+$toolbarHeight: 80px;
+
 .header {
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 	position: fixed;
@@ -24,7 +26,7 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 81px;
+	height: 80px;
 	width: 142px;	
 	z-index: 2;
 }
@@ -71,7 +73,7 @@
 	display: block;
 	position: absolute;
 	left: 0;
-	top: 81px;
+	top: $toolbarHeight;
 	background: var(--colour-dark-bg);
 	padding: var(--gutter);
 	transform: translateX(-100%);
@@ -98,7 +100,7 @@
 .searchBar {
 	width: 100%;
 	height: auto;
-	display: block;
+	display: flex;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -112,7 +114,7 @@
 }
 
 .searchOpen {
-	transform: translateY(100%);
+	transform: translateY($toolbarHeight);
 }
 
 
@@ -125,5 +127,9 @@
 
 	.nav {
 		width: 300px;
+	}
+
+	.searchBar input {
+		width: 30%;
 	}
 }

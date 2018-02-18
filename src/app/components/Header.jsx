@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import { Button } from './Button.jsx';
 
 const styles = require('../../sass/components/header.scss');
 const logoSrc = require('../../assets/ncdc-logo.svg');
@@ -44,6 +45,9 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         {/*Search bar*/}
         <div className={classNames(styles.searchBar, this.state.searchBarOpen ? styles.searchOpen : null)}>
           <input type="text" placeholder="Search..."/>
+          <Button>
+            Search
+          </Button>
         </div>
 
         <div className={styles.headerWrapper}>
