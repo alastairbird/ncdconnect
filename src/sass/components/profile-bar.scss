@@ -1,0 +1,36 @@
+// ======================================================================
+// Profile Bar
+// ======================================================================
+@import "../base/settings";
+@import "../base/tools";
+
+.profileBar {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background: var(--colour-dark-bg);
+	padding: var(--gutter);
+	transform: translateY(-100%);
+	transition: transform 0.3s ease-in;
+	will-change: transform;
+	z-index: 0;
+}
+
+.profileBar {
+	right: 0;
+	left: auto;
+}
+
+.profileBarOpen {
+	transform: translateY(var(--toolbar-height));
+}
+
+@include media("tablet-up") {
+	.profileBar {
+		width: auto;
+	}
+}

@@ -2,6 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { Button } from './Button.jsx';
+import { SearchBar } from './SearchBar.jsx';
+import { Navigation } from './Navigation.jsx';
+import { ProfileBar } from './ProfileBar.jsx';
 
 const styles = require('../../sass/components/header.scss');
 const logoSrc = require('../../assets/ncdc-logo.svg');
@@ -56,28 +59,15 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
       <header className={styles.header}>
 
         {/*Profile bar*/}
-        <div className={classNames(styles.profileBar, this.state.profileBarOpen ? styles.profileBarOpen : null)}>
-          <Link onClick={this.toggleNavigation} to='/'>Register</Link>
-          <Link onClick={this.toggleNavigation} to='/'>Logout</Link>
-        </div>
-        
+        <ProfileBar profileBarOpen={this.state.profileBarOpen}/>
         {/*Search bar*/}
-        <div className={classNames(styles.searchBar, this.state.searchBarOpen ? styles.searchBarOpen : null)}>
-          <input type="text" placeholder="Search..."/>
-          <Button>
-            Search
-          </Button>
-        </div>
+        <SearchBar searchBarOpen={this.state.searchBarOpen}/>
 
         <div className={styles.headerWrapper}>
           {/*Toggles*/}
-          <div className={styles.menuSearchWrapper}>
-            {!this.state.navigationOpen &&
-              <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>
-            }
-            {this.state.navigationOpen &&
-              <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>
-            }
+          <div className={styles.toggleWrappers}>
+            {!this.state.navigationOpen && <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>}
+            {this.state.navigationOpen && <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
             <a onClick={this.toggleSearchBar} className={classNames(styles.menuButt, this.state.searchBarOpen ? styles.menuButtOpen : null)}><i className="icon-magnifying-glass__base"></i></a>
           </div>
 
@@ -85,21 +75,11 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
           <img className={styles.logo} src={logoSrc} alt="NCD Connect logo" width="180" height="103" />
 
           {/*Profile toggle*/}
-          <div className={styles.menuProfileWrapper}>
-            <a onClick={this.toggleProfileBar} className={classNames(styles.menuButt, this.state.profileBarOpen ? styles.menuButtOpen : null)}><i className="icon-user__base"></i></a>
-          </div>
+          <a onClick={this.toggleProfileBar} className={classNames(styles.menuButt, styles.menuButtProfile, this.state.profileBarOpen ? styles.menuButtOpen : null)}><i className="icon-user__base"></i></a>
         </div>
-       
 
         {/*Navigation*/}
-        <ul className={classNames(styles.nav, this.state.navigationOpen ? styles.navOpen : null)}>
-          <li><Link onClick={this.toggleNavigation} to='/'>Home</Link></li>
-          <li><Link onClick={this.toggleNavigation} to='/Connect'>Connect</Link></li>
-          <li><Link onClick={this.toggleNavigation} to='/Opportunities'>Opportunities</Link></li>
-          <li><Link onClick={this.toggleNavigation} to='/Events'>Events</Link></li>
-          <li><Link onClick={this.toggleNavigation} to='/About'>About</Link></li>
-          <li><Link onClick={this.toggleNavigation} to='/Contact'>Contact</Link></li>
-        </ul>
+        <Navigation navigationOpen={this.state.navigationOpen}/>
       </header>
     );
   }
