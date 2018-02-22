@@ -48,9 +48,9 @@
 }
 
 .menuButtOpen {
-	color: var(--colour-accent-quaternary);
+	color: var(--colour-light-text);
 	background: var(--colour-semi-trans);
-	
+
 	&:hover {
 		color: var(--colour-accent-quaternary);
 	}
@@ -75,7 +75,6 @@
 
 	.menuButtOpen {
 		transition: background 0.3s ease-in, color 0.3s ease-in;
-		color: var(--colour-accent-quaternary);
 
 		&:hover {
 			color: var(--colour-accent-main);

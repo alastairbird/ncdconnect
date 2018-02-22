@@ -21,7 +21,7 @@
 
 	input {
 		border: 0;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 2px solid var(--colour-accent-quaternary);
 	}
 
 	input:focus {
@@ -29,7 +29,10 @@
 	}
 
 	button {
+		background: #fff;
+		color: var(--colour-accent-quaternary);
 		padding: calc(var(--gutter) /2) calc(var(--gutter) / 3);
+		border-bottom: 2px solid var(--colour-accent-quaternary);
 	}
 }
 
@@ -39,8 +42,9 @@
 
 @include media("tablet-up") {
 	.searchBar {
+		height: 100%;
 	    max-width: 240px;
-		padding: calc(var(--gutter) / 2) 0;
+		padding: 0;
 	    background: none;
 	    z-index: 3;
 	    transform: translateY(0);
