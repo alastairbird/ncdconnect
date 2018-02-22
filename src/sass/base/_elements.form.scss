@@ -5,6 +5,13 @@
 input, textarea, select, button {
   font-family: var(--base-font-family);
   font-size: inherit;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    stroke: none;
+    outline: none;
+  }
 }
 
 input,
@@ -12,12 +19,6 @@ textarea,
 select {
   width: 100%;
   padding: calc(var(--gutter) / 2);
-
-  &:hover,
-  &:focus {
-    box-shadow: 0;
-    stroke: 0;
-  }
 }
 
 select {

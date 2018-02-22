@@ -8,16 +8,6 @@
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 	position: fixed;
 	width: 100%;
-
-	a,
-	a:visited {
-		color: #fff;
-		text-decoration: none;
-	}
-
-	a:hover {
-		color: var(--colour-accent-quaternary);
-	}
 }
 
 .headerWrapper {
@@ -31,7 +21,6 @@
 
 // Logo
 // ======================================================================
-
 .logo {
 	position: absolute;
 	top: 0;
@@ -54,17 +43,14 @@
 
 	&:hover {
 		cursor: pointer;
-		color: var(--colour-base-text);
+		color: var(--colour-accent-quaternary);
 	}
-}
-
-a.menuButt {
-	color: var(--colour-accent-main);
 }
 
 .menuButtOpen {
 	color: var(--colour-accent-quaternary);
-
+	background: var(--colour-semi-trans);
+	
 	&:hover {
 		color: var(--colour-accent-quaternary);
 	}
@@ -88,8 +74,8 @@ a.menuButt {
 	}
 
 	.menuButtOpen {
-		background: var(--colour-dark-bg);
 		transition: background 0.3s ease-in, color 0.3s ease-in;
+		color: var(--colour-accent-quaternary);
 
 		&:hover {
 			color: var(--colour-accent-main);

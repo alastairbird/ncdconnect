@@ -23,7 +23,7 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
       <div className={classNames(styles.searchBar, this.props.searchBarOpen ? styles.searchBarOpen : null)}>
         <input type="text" placeholder="Search..."/>
         <Button>
-          Search
+          <i className="icon-magnifying-glass__base"></i>
         </Button>
       </div>
     );

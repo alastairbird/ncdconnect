@@ -18,6 +18,19 @@
 	transition: transform 0.3s ease-in;
 	will-change: transform;
 	z-index: 0;
+
+	input {
+		border: 0;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	input:focus {
+		box-shadow: 0;
+	}
+
+	button {
+		padding: calc(var(--gutter) /2) calc(var(--gutter) / 3);
+	}
 }
 
 .searchBarOpen {
@@ -25,10 +38,39 @@
 }
 
 @include media("tablet-up") {
+	.searchBar {
+	    max-width: 240px;
+		padding: calc(var(--gutter) / 2) 0;
+	    background: none;
+	    z-index: 3;
+	    transform: translateY(0);
+	    left: calc(var(--toolbar-height) *2);
+	    opacity: 0;
 
+	    input {
+	    	width: 100%;
+	    }
 
-	
-	.searchBar input {
-		width: 25%;
+	}
+
+	.searchBarOpen {
+		opacity: 1;
+		animation: fadeIn 0.3s ease-in;
+	}
+}
+
+@include media("desktop-up") {
+	.searchBar {
+		max-width: 400px;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }

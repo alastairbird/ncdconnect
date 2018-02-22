@@ -64,11 +64,13 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         <SearchBar searchBarOpen={this.state.searchBarOpen}/>
 
         <div className={styles.headerWrapper}>
+        
           {/*Toggles*/}
           <div className={styles.toggleWrappers}>
             {!this.state.navigationOpen && <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>}
             {this.state.navigationOpen && <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
-            <a onClick={this.toggleSearchBar} className={classNames(styles.menuButt, this.state.searchBarOpen ? styles.menuButtOpen : null)}><i className="icon-magnifying-glass__base"></i></a>
+            {!this.state.searchBarOpen && <a onClick={this.toggleSearchBar} className={styles.menuButt}><i className="icon-magnifying-glass__base"></i></a>}
+            {this.state.searchBarOpen && <a onClick={this.toggleSearchBar} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
           </div>
 
           {/*Logo*/}

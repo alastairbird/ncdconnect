@@ -15,7 +15,6 @@
 	background: var(--colour-dark-bg);
 	padding: var(--gutter);
 	transform: translateX(-100%);
-	transition: transform 0.3s ease-in;
 	will-change: transform;
 
 	li {
@@ -30,10 +29,21 @@
 
 .navOpen {
 	transform: translateX(0);
+	animation: shiftIn 0.3s ease-in;
 }
 
 @include media("tablet-up") {
 	.nav {
 		width: 300px;
+	}
+}
+
+@keyframes shiftIn {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
 	}
 }
