@@ -10,6 +10,11 @@ import { Opportunities } from './pages/Opportunities.jsx';
 import { Events } from './pages/Events.jsx';
 import { About } from './pages/About.jsx';
 import { Contact } from './pages/Contact.jsx';
+import { Login } from './pages/Login.jsx';
+import { Privacy } from './pages/Privacy.jsx';
+import { Terms } from './pages/Terms.jsx';
+import { Sitemap } from './pages/Sitemap.jsx';
+
 
 const styles = require('../sass/components/main.scss')
 require('../sass/base/base.scss')
@@ -23,6 +28,10 @@ const Main = () => (
       <Route path='/Events' component={Events}/>
       <Route path='/About' component={About}/>
       <Route path='/Contact' component={Contact}/>
+      <Route path='/Login' component={Login}/>
+      <Route path='/Privacy' component={Privacy}/>
+      <Route path='/Terms' component={Terms}/>
+      <Route path='/Sitemap' component={Sitemap}/>
     </Switch>
   </section>
 )

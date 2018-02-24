@@ -22,7 +22,7 @@ export class Footer extends React.Component {
           <li><Link to='/Contact'>Contact</Link></li>
         </ul>
         <small className={styles.botLinks}>
-        Terms & Conditions / Sitemap
+        <Link to='/Terms'>Terms & Conditions</Link><Link to='/Privacy'>Privacy</Link><Link to='/Sitemap'>Sitemap</Link>
         </small>
       </footer>
     );

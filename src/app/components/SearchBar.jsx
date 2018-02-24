@@ -21,6 +21,9 @@ export class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   render() {
     return (
       <div className={classNames(styles.searchBar, this.props.searchBarOpen ? styles.searchBarOpen : null)}>
+        
+        <a className={styles.closeLink} onClick={this.props.closeSearchBar}><i className="icon-cross__base"></i></a>
+
         <input type="text" placeholder="Search..."/>
         <Button>
           <i className="icon-magnifying-glass__base"></i>

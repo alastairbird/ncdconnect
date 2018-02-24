@@ -34,10 +34,9 @@ export class Navigation extends React.Component<NavigationProps, NavigationState
           <img className={styles.ctaIcon} src={calSrc} alt="" />Events
           </Link>
         <div className={styles.botlinks}>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/About'>Login</Link>
+          <Link className={styles.link} onClick={this.toggleNavigation} to='/Login'>Login</Link>
           <Link className={styles.link} onClick={this.toggleNavigation} to='/About'>About</Link>
           <Link className={styles.link} onClick={this.toggleNavigation} to='/Contact'>Contact</Link>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/Contact'>Privacy</Link>
         </div>
       </nav>
     );

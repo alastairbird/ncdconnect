@@ -46,6 +46,16 @@
 	transform: translateY(var(--toolbar-height));
 }
 
+.closeLink {
+	padding: calc(var(--gutter) / 2);
+	height: 100%;
+	display: none;
+	align-items: center;
+	cursor: pointer;
+	color: var(--colour-light-text);
+}
+
+
 @include media("tablet-up") {
 	.searchBar {
 		height: 100%;
@@ -65,6 +75,10 @@
 		button {
 	     	padding: calc(var(--gutter) / 2) var(--gutter);
 	 	}
+	}
+
+	.closeLink {
+		display: inline-flex;
 	}
 
 	.searchBarOpen {
