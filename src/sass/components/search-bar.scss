@@ -30,9 +30,15 @@
 
 	button {
 		background: #fff;
+		font-size: var(--h2-size);
+		padding: calc(var(--gutter) / 2);
 		color: var(--colour-accent-quaternary);
-		padding: calc(var(--gutter) /2) calc(var(--gutter) / 3);
 		border-bottom: 2px solid var(--colour-accent-quaternary);
+
+		&:hover {
+			background: none;
+			color: var(--colour-accent-main);
+		}
 	}
 }
 
@@ -48,17 +54,22 @@
 	    background: none;
 	    z-index: 3;
 	    transform: translateY(0);
-	    left: calc(var(--toolbar-height) *2);
+	    right: var(--toolbar-height);
+	    left: auto;
 	    opacity: 0;
 
 	    input {
 	    	width: 100%;
 	    }
 
+		button {
+	     	padding: calc(var(--gutter) / 2) var(--gutter);
+	 	}
 	}
 
 	.searchBarOpen {
 		opacity: 1;
+		right: 0;
 		animation: fadeIn 0.3s ease-in;
 	}
 }

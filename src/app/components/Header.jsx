@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Button } from './Button.jsx';
 import { SearchBar } from './SearchBar.jsx';
 import { Navigation } from './Navigation.jsx';
-import { ProfileBar } from './ProfileBar.jsx';
 
 const styles = require('../../sass/components/header.scss');
 const logoSrc = require('../../assets/ncdc-logo.svg');
@@ -58,26 +57,20 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     return (
       <header className={styles.header}>
 
-        {/*Profile bar*/}
-        <ProfileBar profileBarOpen={this.state.profileBarOpen}/>
         {/*Search bar*/}
         <SearchBar searchBarOpen={this.state.searchBarOpen}/>
 
         <div className={styles.headerWrapper}>
-        
-          {/*Toggles*/}
-          <div className={styles.toggleWrappers}>
-            {!this.state.navigationOpen && <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>}
-            {this.state.navigationOpen && <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
-            {!this.state.searchBarOpen && <a onClick={this.toggleSearchBar} className={styles.menuButt}><i className="icon-magnifying-glass__base"></i></a>}
-            {this.state.searchBarOpen && <a onClick={this.toggleSearchBar} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
-          </div>
-
+          {/*Menu Toggle*/}
+          {!this.state.navigationOpen && <a onClick={this.toggleNavigation} className={styles.menuButt}><i className="icon-menu__base"></i></a>}
+          {this.state.navigationOpen && <a onClick={this.toggleNavigation} className={classNames(styles.menuButt, styles.menuButtOpen)}><i className="icon-cross__base"></i></a>}
           {/*Logo*/}
-          <img className={styles.logo} src={logoSrc} alt="NCD Connect logo" width="180" height="103" />
+          <Link to='/' className={styles.logo}>
+            <img src={logoSrc} alt="NCD Connect logo" width="180" height="103" />
+          </Link>
 
-          {/*Profile toggle*/}
-          <a onClick={this.toggleProfileBar} className={classNames(styles.menuButt, styles.menuButtProfile, this.state.profileBarOpen ? styles.menuButtOpen : null)}><i className="icon-user__base"></i></a>
+          {/*Search toggle*/}
+          {!this.state.searchBarOpen && <a onClick={this.toggleSearchBar} className={styles.menuButt}><i className="icon-magnifying-glass__base"></i></a>}
         </div>
 
         {/*Navigation*/}
