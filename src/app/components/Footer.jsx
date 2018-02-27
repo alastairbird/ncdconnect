@@ -19,6 +19,7 @@ export class Footer extends React.Component {
           <li><Link to='/Opportunities'>Opportunities</Link></li>
           <li><Link to='/Events'>Events</Link></li>
           <li><Link to='/About'>About</Link></li>
+          <li><Link to='/WorldMap'>Map</Link></li>
           <li><Link to='/Contact'>Contact</Link></li>
         </ul>
         <small className={styles.botLinks}>

@@ -12,10 +12,13 @@
 	position: absolute;
 	left: 0;
 	top: var(--toolbar-height);
-	background: var(--colour-dark-bg);
-	padding: calc(var(--gutter) * 2) var(--gutter);
 	transform: translateX(-100%);
 	will-change: transform;
+	background: var(--colour-dark-bg);
+}
+
+.navWrapper {
+	padding: var(--gutter);
 }
 
 .navOpen {
@@ -55,8 +58,8 @@
 
 
 .botlinks {
-	padding-top: calc(var(--gutter) * 2);
-	margin-top: calc(var(--gutter) * 2);
+	padding-top: var(--gutter);
+	margin-top: var(--gutter);
 	border-top: 1px solid rgba(255,255,255,0.2);
 
 	.link {
@@ -65,6 +68,23 @@
 		opacity: 0.7;
 	}
 }
+
+.topLinks {
+	padding: calc(var(--gutter) / 2) var(--gutter);
+	background: var(--colour-accent-main);
+
+	.link {
+		font-size: var(--h4-size);
+		margin-bottom: calc(var(--gutter) / 5);
+	}
+
+	i {
+	    font-size: 32px;
+	    opacity: 0.8;
+	    padding-right: calc(var(--gutter) / 3);
+	}
+}
+
 
 @include media("tablet-up") {
 	.nav {

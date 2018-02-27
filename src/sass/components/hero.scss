@@ -8,7 +8,7 @@
 .hero {
 	height: auto;
 	padding-bottom: calc(var(--gutter) * 2);
-	background: transparent url(../../assets/world.png) 100% 0% no-repeat;
+	background: none;
 }
 
 .heroCopy {
@@ -64,5 +64,9 @@
 @include media("portrait-tablet-up") {
 	.ctaBlock {
 		width: 30%;
+	}
+
+	.hero {
+		background: transparent url(../../assets/world.png) 100% 0% no-repeat;
 	}
 }

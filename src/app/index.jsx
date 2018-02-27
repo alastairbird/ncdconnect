@@ -14,6 +14,7 @@ import { Login } from './pages/Login.jsx';
 import { Privacy } from './pages/Privacy.jsx';
 import { Terms } from './pages/Terms.jsx';
 import { Sitemap } from './pages/Sitemap.jsx';
+import { WorldMap } from './pages/WorldMap.jsx';
 
 
 const styles = require('../sass/components/main.scss')
@@ -32,6 +33,7 @@ const Main = () => (
       <Route path='/Privacy' component={Privacy}/>
       <Route path='/Terms' component={Terms}/>
       <Route path='/Sitemap' component={Sitemap}/>
+      <Route path='/WorldMap' component={WorldMap}/>
     </Switch>
   </section>
 )
