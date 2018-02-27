@@ -20,9 +20,7 @@ export class Hero extends React.Component {
       	<div className={styles.heroCopy}>
 		    <h1>Research together</h1>
 		    <p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud a qui officia deserunt mollit anim id est laborum.
+    			<em>A place for non communicable disease researchers to connect under a united cause of making the world a better place to live</em>
 		    </p>
 		    <p>
 		    	<Button>
