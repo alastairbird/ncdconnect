@@ -26,25 +26,25 @@ export class Navigation extends React.Component<NavigationProps, NavigationState
     return (
       <nav className={classNames(styles.nav, this.props.navigationOpen ? styles.navOpen : null)}>
         <div className={styles.topLinks}>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/Login'><i className="icon-user__base"></i>Register / Login</Link>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Login'><i className="icon-user__base"></i>Register / Login</Link>
         </div>
         <div className={styles.navWrapper}>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/Connect'>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Connect'>
             <img className={styles.ctaIcon} src={chatSrc} alt="" />Connect
           </Link>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/Opportunities'>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Opportunities'>
             <img className={styles.ctaIcon} src={newsSrc} alt="" />Opportunities
           </Link>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/Events'>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Events'>
             <img className={styles.ctaIcon} src={calSrc} alt="" />Events
           </Link>
-          <Link className={styles.link} onClick={this.toggleNavigation} to='/WorldMap'>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/WorldMap'>
             <img className={styles.ctaIcon} src={mapSrc} alt="" />Map
           </Link>
           <div className={styles.botlinks}>
-            <Link className={styles.link} onClick={this.toggleNavigation} to='/'>Home</Link>
-            <Link className={styles.link} onClick={this.toggleNavigation} to='/About'>About</Link>
-            <Link className={styles.link} onClick={this.toggleNavigation} to='/Contact'>Contact</Link>
+            <Link className={styles.link} onClick={this.props.toggleNavigation} to='/'>Home</Link>
+            <Link className={styles.link} onClick={this.props.toggleNavigation} to='/About'>About</Link>
+            <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Contact'>Contact</Link>
           </div>
         </div>
       </nav>

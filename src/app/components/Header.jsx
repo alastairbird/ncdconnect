@@ -75,7 +75,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         </div>
 
         {/*Navigation*/}
-        <Navigation navigationOpen={this.state.navigationOpen}/>
+        <Navigation navigationOpen={this.state.navigationOpen} toggleNavigation={this.toggleNavigation}/>
       </header>
     );
   }
