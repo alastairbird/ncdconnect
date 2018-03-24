@@ -1,0 +1,24 @@
+// ======================================================================
+// Login
+// ======================================================================
+
+//  Auth0 Lock component
+//  https://auth0.com/docs/libraries/lock/v10/ui-customization
+//  Doubling up selectors to boost specificity
+// ------------------------------------------------------------------
+
+// Make it a bit wider
+.auth0-lock.auth0-lock .auth0-lock-widget.auth0-lock-widget {
+  width: 340px;
+}
+
+
+// Make google button neutral
+.auth0-lock-social-button[data-provider^="google"].auth0-lock-social-button[data-provider^="google"] {
+  background-color: #555555;
+}
+
+
+.auth0-lock.auth0-lock .auth0-lock-social-button.auth0-lock-social-big-button[data-provider="auth0"].auth0-lock-social-big-button[data-provider="auth0"] {
+  background-color: var(--colour-accent-quaternary);
+}
