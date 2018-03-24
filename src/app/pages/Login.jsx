@@ -1,5 +1,4 @@
 import React from 'react';
-const styles = require('../../sass/components/login.scss');
 
 export class Login extends React.Component {
 
