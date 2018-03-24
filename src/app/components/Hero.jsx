@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from './Button.jsx';
+import { Link } from 'react-router-dom';
+
 const styles = require('../../sass/components/hero.scss');
 const calSrc = require('../../assets/calendar.svg')
 const chatSrc = require('../../assets/chat.svg')
 const newsSrc = require('../../assets/newspaper.svg')
-
-
 
 
 export class Hero extends React.Component {
@@ -23,9 +23,9 @@ export class Hero extends React.Component {
     			<em>A place for non communicable disease researchers to connect under a united cause of making the world a better place to live</em>
 		    </p>
 		    <p>
-		    	<Button>
-		    		Sign up today
-		    	</Button>
+                <Link className="button__base" onClick={this.props.toggleNavigation} to='/Login'>
+                    Sign up today
+                </Link>
 		    </p>
         </div>
 
