@@ -23,10 +23,15 @@ export class Navigation extends React.Component<NavigationProps, NavigationState
   }
 
   render() {
+    const {isAuthenticated} = this.props;
     return (
       <nav className={classNames(styles.nav, this.props.navigationOpen ? styles.navOpen : null)}>
         <div className={styles.topLinks}>
-          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Login'><i className="icon-user__base"></i>Register / Login</Link>
+            {isAuthenticated
+             && <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Profile'><i className="icon-user__base"></i>Profile</Link>
+             || <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Login'><i className="icon-user__base"></i>Register / Login</Link>
+            }
+
         </div>
         <div className={styles.navWrapper}>
           <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Connect'>

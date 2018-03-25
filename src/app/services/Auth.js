@@ -15,7 +15,6 @@ export default class Auth {
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
         this.handleAuthentication = this.handleAuthentication.bind(this);
-        this.isAuthenticated = this.isAuthenticated.bind(this);
     }
 
     login() {
@@ -49,7 +48,7 @@ export default class Auth {
         localStorage.removeItem('expires_at');
     }
 
-    isAuthenticated() {
+    get isAuthenticated() {
         // Check whether the current time is past the
         // Access Token's expiry time
         const expiresAt = JSON.parse(localStorage.getItem('expires_at'));

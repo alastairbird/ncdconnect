@@ -28,7 +28,7 @@ require('../sass/base/base.scss')
 const auth = new Auth()
 
 const apolloClient = new ApolloClient({
-    uri: `http://localhost:8080/graphql`
+    uri: `https://ncdconnect-backend-prod.herokuapp.com//graphql`
 })
 
 const Main = () => (
@@ -57,7 +57,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
-      	<Header/>
+      	<Header auth={auth}/>
         <Main/>
         <Footer/>
       </div>

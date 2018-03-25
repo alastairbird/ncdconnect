@@ -10,7 +10,7 @@ class ProfileView extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.existingProfile !== this.props.existingProfile) {
-            this.setState({profile: nextProps.existingProfile});
+            this.setState({profile: nextProps.existingProfile || {name: ''}});
         }
     }
 

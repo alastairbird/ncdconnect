@@ -54,6 +54,8 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   render() {
+    const isAuthenticated = this.props.auth.isAuthenticated;
+
     return (
       <header className={styles.header}>
 
@@ -75,7 +77,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         </div>
 
         {/*Navigation*/}
-        <Navigation navigationOpen={this.state.navigationOpen} toggleNavigation={this.toggleNavigation}/>
+        <Navigation navigationOpen={this.state.navigationOpen} toggleNavigation={this.toggleNavigation} isAuthenticated={isAuthenticated}/>
       </header>
     );
   }
