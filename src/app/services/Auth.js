@@ -1,4 +1,5 @@
 import auth0 from 'auth0-js';
+import jwt_decode from 'jwt-decode';
 
 
 export default class Auth {
@@ -53,5 +54,10 @@ export default class Auth {
         // Access Token's expiry time
         const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
         return new Date().getTime() < expiresAt;
+    }
+
+    get userId() {
+        const idToken = jwt_decode(localStorage.getItem('id_token'));
+        return idToken.sub;
     }
 }
