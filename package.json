@@ -30,6 +30,7 @@
     "file-loader": "^1.1.6",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
+    "heroku-ssl-redirect": "0.0.4",
     "jwt-decode": "^2.2.0",
     "node-sass": "^4.6.1",
     "postcss": "^6.0.14",
