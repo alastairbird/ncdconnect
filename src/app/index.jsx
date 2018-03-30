@@ -35,7 +35,7 @@ const Main = () => (
   <section className={styles.main}>
     <ApolloProvider client={apolloClient}>
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' render={(props) => <Home auth={auth} {...props} />} />
           <Route path='/Connect' component={Connect}/>
           <Route path='/Opportunities' component={Opportunities}/>
           <Route path='/Events' component={Events}/>

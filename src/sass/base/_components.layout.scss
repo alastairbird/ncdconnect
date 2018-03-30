@@ -5,7 +5,8 @@
 .contentWrapper {
 	max-width: var(--base-regular-width);
 	margin: 0 auto;
-	padding-bottom: var(--gutter);
+    padding: 0 var(--gutter) calc(var(--gutter) *2);
+    background: rgba(245, 245, 245, 0.5);
 
 	a,
 	a:visited {

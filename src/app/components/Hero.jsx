@@ -15,6 +15,7 @@ export class Hero extends React.Component {
   }
 
   render() {
+    const {isAuthenticated} = this.props;
     return (
       <div className={styles.hero}>
       	<div className={styles.heroCopy}>
@@ -22,11 +23,14 @@ export class Hero extends React.Component {
 		    <p>
     			<em>A place for non communicable disease researchers to connect under a united cause of making the world a better place to live</em>
 		    </p>
-		    <p>
+            {isAuthenticated === false && 
+              <p>
                 <Link className="button__base" onClick={this.props.toggleNavigation} to='/Login'>
                     Sign up today
                 </Link>
-		    </p>
+              </p>
+            }
+		   
         </div>
 
         <ul className={styles.ctaPanel}>

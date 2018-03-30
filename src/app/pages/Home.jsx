@@ -5,9 +5,10 @@ import { Hero } from '../components/Hero.jsx';
 
 export class Home extends React.Component {
   render () {
+    const {isAuthenticated} = this.props;
     return (
       <div>
-        <Hero/>
+        <Hero auth={isAuthenticated}/>
       </div>
     );
   }
