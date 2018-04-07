@@ -14,3 +14,7 @@
 		text-decoration: none;
 	}
 }
+
+.contentWrapper--thin {
+	max-width: calc(var(--base-regular-width) / 2);
+}
