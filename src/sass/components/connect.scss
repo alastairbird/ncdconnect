@@ -30,7 +30,7 @@ $toolbarHeight: 48px;
 }
 
 .row {
-	width: calc(50% - calc(var(--gutter) / 2);
+	width: 100%;
 	display: flex;
 	background: #fff;
 	margin-bottom: calc(var(--gutter) / 2);
@@ -41,17 +41,21 @@ $toolbarHeight: 48px;
 	width: $rowSize;
 	height: $rowSize;
 	overflow: hidden;
+	display: none;
 }
 
 .rowContent {
-	width: calc(100% - #{$rowSize});
-	height: $rowSize;
+	width: 100%;
+	height: auto;
 	padding: var(--gutter);
 	position: relative;
 	
 	h2 {
 		margin-bottom: var(--gutter);
 		color: var(--colour-accent-quaternary);
+		width: 100%;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 
 	p {
@@ -74,17 +78,23 @@ $toolbarHeight: 48px;
 }
 
 .rowText {
-	height: 90%;
+	height: auto;
 	position: relative;
+	padding-bottom: var(--gutter);
 }
 
 .rowEnd {
 	font-size: var(--medium-font-size);
-	display: flex;
-	justify-content: space-between;
+	display: block;
+
+	label {
+		display: block;
+		width: 100%;
+	}
 
 	a {
 		color: var(--colour-accent-main);
+		display: block;
 	}
 }
 
@@ -93,4 +103,34 @@ $toolbarHeight: 48px;
 .postLoader {
 	text-align: center;
 	margin: var(--gutter) 0;
+}
+
+
+
+@include media("tablet-up") {
+  	.rowContent {
+		width: calc(100% - #{$rowSize});
+		height: $rowSize;
+	}
+	.rowText {
+		height: 90%;
+		padding-bottom: 0;
+	}
+	.rowEnd {
+		display: flex;
+		justify-content: space-between;
+
+		label {
+			width: auto;
+		}
+	}
+	.rowPreview {
+		display: block;
+	}
+}
+
+@include media("laptop-up") {
+	.row {
+		width: calc(50% - calc(var(--gutter) / 2));
+	}
 }
