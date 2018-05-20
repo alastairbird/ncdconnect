@@ -21,50 +21,28 @@ export class Connect extends React.Component {
         <div className={styles.posts}>
           <div className={styles.row}>
             <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/200x200" />
+              <img src="http://via.placeholder.com/100x100" />
             </div>
             <div className={styles.rowContent}>
-              <h2>My first post</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis...
-              </p>
-              <Button className={styles.rowButton}>
-                Read more <i className="icon-chevron-right__base"></i>
-              </Button>
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/200x200" />
-            </div>
-            <div className={styles.rowContent}>
-              <h2>My Second post</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis...
-              </p>
-              <Button className={styles.rowButton}>
-                Read more <i className="icon-chevron-right__base"></i>
-              </Button>
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/200x200" />
-            </div>
-            <div className={styles.rowContent}>
-              <h2>My Third post</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis...
-              </p>
-              <Button className={styles.rowButton}>
-                Read more <i className="icon-chevron-right__base"></i>
-              </Button>
+              <div className={styles.rowText}>
+                <h3>My first post</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div className={styles.rowTags}>
+                <label>
+                  Tags: Diabetes
+                </label>
+              </div>
+              <div className={styles.rowAction}>
+                <a href="#">View post</a>
+              </div>
             </div>
           </div>
         </div>
