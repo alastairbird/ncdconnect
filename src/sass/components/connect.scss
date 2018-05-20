@@ -1,0 +1,50 @@
+// ======================================================================
+// Connect
+// ======================================================================
+@import "../base/settings";
+@import "../base/tools";
+
+
+.toolbar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.toolbarFilters {
+
+}
+
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	background: #fff;
+	margin-bottom: calc(var(--gutter) / 2);
+}
+
+.rowPreview {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.rowContent {
+	width: calc(100% - 200px);
+	padding: var(--gutter);
+	position: relative;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+

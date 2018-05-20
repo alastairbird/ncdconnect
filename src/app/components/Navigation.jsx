@@ -5,6 +5,7 @@ const calSrc = require('../../assets/calendar-white.svg')
 const chatSrc = require('../../assets/chat-white.svg')
 const newsSrc = require('../../assets/newspaper-white.svg')
 const mapSrc = require('../../assets/planet-earth.svg')
+const search = require('../../assets/magnifying-glass.svg')
 
 const styles = require('../../sass/components/navigation.scss')
 
@@ -36,6 +37,9 @@ export class Navigation extends React.Component<NavigationProps, NavigationState
         <div className={styles.navWrapper}>
           <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Connect'>
             <img className={styles.ctaIcon} src={chatSrc} alt="" />Connect
+          </Link>
+          <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Discover'>
+            <img className={styles.ctaIcon} src={search} alt="" />Discover
           </Link>
           <Link className={styles.link} onClick={this.props.toggleNavigation} to='/Opportunities'>
             <img className={styles.ctaIcon} src={newsSrc} alt="" />Opportunities

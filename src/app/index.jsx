@@ -6,6 +6,7 @@ import {Header} from './components/Header.jsx';
 import {Footer} from './components/Footer.jsx';
 import {Home} from './pages/Home.jsx';
 import {Connect} from './pages/Connect.jsx';
+import {Discover} from './pages/Discover.jsx';
 import {Opportunities} from './pages/Opportunities.jsx';
 import {Events} from './pages/Events.jsx';
 import {About} from './pages/About.jsx';
@@ -37,6 +38,7 @@ const Main = () => (
         <Switch>
           <Route exact path='/' render={(props) => <Home auth={auth} {...props} />} />
           <Route path='/Connect' component={Connect}/>
+          <Route path='/Discover' component={Discover}/>
           <Route path='/Opportunities' component={Opportunities}/>
           <Route path='/Events' component={Events}/>
           <Route path='/About' component={About}/>

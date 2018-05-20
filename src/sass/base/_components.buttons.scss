@@ -16,4 +16,9 @@
     cursor: pointer;
     background: lighten(#444, 30%);
   }
+
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
