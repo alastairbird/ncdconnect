@@ -31,7 +31,7 @@
 	align-items: center;
 	font-size: 1.2em;
 	color: #fff;
-	margin-bottom: calc(var(--gutter) / 2);
+	margin-bottom: var(--gutter);
 	transition: opacity 0.3s ease-in;
 
 	img {

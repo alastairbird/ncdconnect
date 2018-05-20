@@ -4,41 +4,59 @@
 @import "../base/settings";
 @import "../base/tools";
 
+$rowSize: 240px;
+$toolbarHeight: 48px;
 
 .toolbar {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: var(--gutter);
 }
 
 .toolbarFilters {
+	line-height: var(--height-of-button);
 
+	label {
+		vertical-align: base;
+	}
 }
 
+// Panel posts
+//----------------------------------------
 .posts {
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: calc(var(--gutter) / -2);
 }
 
 .row {
-	width: 100%;
+	width: calc(50% - calc(var(--gutter) / 2);
 	display: flex;
 	background: #fff;
 	margin-bottom: calc(var(--gutter) / 2);
+	margin: 0 0 calc(var(--gutter) / 2) calc(var(--gutter) / 2);
 }
 
 .rowPreview {
-	width: 200px;
-	height: 200px;
+	width: $rowSize;
+	height: $rowSize;
 	overflow: hidden;
 }
 
 .rowContent {
-	width: calc(100% - 200px);
+	width: calc(100% - #{$rowSize});
+	height: $rowSize;
 	padding: var(--gutter);
 	position: relative;
+	
+	h2 {
+		margin-bottom: var(--gutter);
+		color: var(--colour-accent-quaternary);
+	}
 
 	p {
 		margin-bottom: 0;
+		font-size: var(--medium-font-size);
 	}
 
 	button {
@@ -48,3 +66,31 @@
 	}
 }
 
+.date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: var(--medium-font-size);
+}
+
+.rowText {
+	height: 90%;
+	position: relative;
+}
+
+.rowEnd {
+	font-size: var(--medium-font-size);
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		color: var(--colour-accent-main);
+	}
+}
+
+// Panel Loader
+//----------------------------------------
+.postLoader {
+	text-align: center;
+	margin: var(--gutter) 0;
+}
