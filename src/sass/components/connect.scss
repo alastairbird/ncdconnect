@@ -7,19 +7,51 @@
 $rowSize: 240px;
 $toolbarHeight: 48px;
 
-.toolbar {
+// Header wrap
+//----------------------------------------
+.headerWrapper {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: calc(var(--gutter) * 2);
+
+	h1 {
+		margin-bottom: 0;
+		color: var(--colour-accent-secondary);
+	}
+}
+
+// Toolbar & Filters
+//----------------------------------------
+
+.toolbar {
 	margin-bottom: var(--gutter);
+
+	h2 {
+		margin-bottom: calc(var(--gutter) / 2);
+	}
 }
 
 .toolbarFilters {
 	line-height: var(--height-of-button);
+	border-bottom: 1px solid var(--color-border-grey);
+}
 
-	label {
-		vertical-align: base;
+
+.filter {
+	font-weight: normal;
+	padding: calc(var(--gutter) / 2) var(--gutter); 
+	transition: box-shadow 0.3s ease-in;
+
+	&:hover {
+		box-shadow: 0 -5px 0 var(--colour-accent-secondary) inset;
 	}
 }
+
+.selectedFilter {
+	box-shadow: 0 -5px 0 var(--colour-accent-secondary) inset;
+	color: var(--colour-accent-secondary);
+}
+
 
 // Panel posts
 //----------------------------------------

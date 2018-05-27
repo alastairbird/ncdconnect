@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/Button.jsx';
 const styles = require('../../sass/components/connect.scss');
+import classNames from 'classnames';
 
 export class Connect extends React.Component {
 
@@ -12,12 +13,21 @@ export class Connect extends React.Component {
   render() {
     return (
       <div className="contentWrapper__base">
-        <h1>Connect</h1>
+        <div className={styles.headerWrapper}>
+          <h1>Connect</h1>
+          <Button>Add post <i className="icon-plus__base"></i></Button>
+        </div>
         <div className={styles.toolbar}>
           <div className={styles.toolbarFilters}>
-            <label>Filter <i className="icon-funnel__base"></i></label>
+            <label className={classNames(styles.filter, styles.selectedFilter)}>All</label>
+            <label className={classNames(styles.filter)}>Individuals</label>
+            <label className={classNames(styles.filter)}>Topics</label>
+            <label className={classNames(styles.filter)}>Organisations</label>
+            <label className={classNames(styles.filter)}>Countries</label>
+            <label className={classNames(styles.filter)}>Course/programme</label>
           </div>
-          <Button>Add post <i className="icon-plus__base"></i></Button>
+          <div className={styles.filters}>
+          </div>
         </div>
         <div className={styles.posts}>
           <div className={styles.row}>
