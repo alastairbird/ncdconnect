@@ -4,7 +4,7 @@
 @import "../base/settings";
 
 .main {
-	padding: calc(var(--gutter) * 8) var(--gutter) 0 var(--gutter);
+	padding: calc(var(--gutter) * 6) var(--gutter) 0 var(--gutter);
 	background: transparent url(../../assets/footer.svg) center bottom no-repeat;
     min-height: 100vh;
 }
