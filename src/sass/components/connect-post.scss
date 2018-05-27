@@ -1,0 +1,123 @@
+// ======================================================================
+// Connect Post
+// ======================================================================
+@import "../base/settings";
+@import "../base/tools";
+$rowSize: 240px;
+.row {
+	width: 100%;
+	display: flex;
+	background: #fff;
+	margin-bottom: var(--gutter);
+	margin: 0 0 var(--gutter) var(--gutter);
+}
+
+.rowPreview {
+	width: $rowSize;
+	height: $rowSize;
+	overflow: hidden;
+	display: none;
+	position: relative;
+}
+
+.authorStrip {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: var(--colour-semi-trans);
+	
+	img {
+		display: inline-block;
+	}
+
+	span {
+		padding: calc(var(--gutter) / 3) calc(var(--gutter) / 2);
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+
+.rowContent {
+	width: 100%;
+	height: auto;
+	padding: var(--gutter);
+	position: relative;
+	
+	h2 {
+		margin-bottom: var(--gutter);
+		color: var(--colour-accent-quaternary);
+		width: 100%;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: var(--medium-font-size);
+	}
+
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: var(--medium-font-size);
+}
+
+.rowText {
+	height: auto;
+	position: relative;
+	padding-bottom: var(--gutter);
+}
+
+.rowEnd {
+	font-size: var(--medium-font-size);
+	display: block;
+
+	label {
+		display: block;
+		width: 100%;
+	}
+
+	a {
+		color: var(--colour-accent-main);
+		display: block;
+	}
+}
+
+
+@include media("tablet-up") {
+  	.rowContent {
+		width: calc(100% - #{$rowSize});
+		height: $rowSize;
+	}
+	.rowText {
+		height: 90%;
+		padding-bottom: 0;
+	}
+	.rowEnd {
+		display: flex;
+		justify-content: space-between;
+
+		label {
+			width: auto;
+		}
+	}
+	.rowPreview {
+		display: block;
+	}
+}
+
+@include media("laptop-up") {
+	.row {
+		width: calc(50% - var(--gutter));
+	}
+}

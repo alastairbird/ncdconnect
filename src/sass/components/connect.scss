@@ -4,8 +4,6 @@
 @import "../base/settings";
 @import "../base/tools";
 
-$rowSize: 240px;
-$toolbarHeight: 48px;
 
 // Header wrap
 //----------------------------------------
@@ -53,116 +51,17 @@ $toolbarHeight: 48px;
 }
 
 
-// Panel posts
+// Connect Posts
 //----------------------------------------
 .posts {
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: calc(var(--gutter) / -2);
+	margin-left: calc(var(--gutter) * -1);
 }
 
-.row {
-	width: 100%;
-	display: flex;
-	background: #fff;
-	margin-bottom: calc(var(--gutter) / 2);
-	margin: 0 0 calc(var(--gutter) / 2) calc(var(--gutter) / 2);
-}
-
-.rowPreview {
-	width: $rowSize;
-	height: $rowSize;
-	overflow: hidden;
-	display: none;
-}
-
-.rowContent {
-	width: 100%;
-	height: auto;
-	padding: var(--gutter);
-	position: relative;
-	
-	h2 {
-		margin-bottom: var(--gutter);
-		color: var(--colour-accent-quaternary);
-		width: 100%;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
-
-	p {
-		margin-bottom: 0;
-		font-size: var(--medium-font-size);
-	}
-
-	button {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-	}
-}
-
-.date {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: var(--medium-font-size);
-}
-
-.rowText {
-	height: auto;
-	position: relative;
-	padding-bottom: var(--gutter);
-}
-
-.rowEnd {
-	font-size: var(--medium-font-size);
-	display: block;
-
-	label {
-		display: block;
-		width: 100%;
-	}
-
-	a {
-		color: var(--colour-accent-main);
-		display: block;
-	}
-}
-
-// Panel Loader
-//----------------------------------------
 .postLoader {
 	text-align: center;
 	margin: var(--gutter) 0;
 }
 
 
-
-@include media("tablet-up") {
-  	.rowContent {
-		width: calc(100% - #{$rowSize});
-		height: $rowSize;
-	}
-	.rowText {
-		height: 90%;
-		padding-bottom: 0;
-	}
-	.rowEnd {
-		display: flex;
-		justify-content: space-between;
-
-		label {
-			width: auto;
-		}
-	}
-	.rowPreview {
-		display: block;
-	}
-}
-
-@include media("laptop-up") {
-	.row {
-		width: calc(50% - calc(var(--gutter) / 2));
-	}
-}

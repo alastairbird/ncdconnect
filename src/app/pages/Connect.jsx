@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/Button.jsx';
+import { ConnectPost } from '../components/ConnectPost.jsx';
 const styles = require('../../sass/components/connect.scss');
 import classNames from 'classnames';
 
@@ -30,98 +31,78 @@ export class Connect extends React.Component {
           </div>
         </div>
         <div className={styles.posts}>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/240x240" />
-            </div>
-            <div className={styles.rowContent}>
-              <div className={styles.rowText}>
-                <em className={styles.date}>2h ago</em>
-                <h2>My first post</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat...
-                </p>
-              </div>
-              <div className={styles.rowEnd}>
-                <label>
-                  Tags: Diabetes, Sugar, Research
-                </label>
-                <a href="#">View post</a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/240x240" />
-            </div>
-            <div className={styles.rowContent}>
-              <div className={styles.rowText}>
-                <em className={styles.date}>2h ago</em>
-                <h2>My first post</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat...
-                </p>
-              </div>
-              <div className={styles.rowEnd}>
-                <label>
-                  Tags: Diabetes, Sugar, Research
-                </label>
-                <a href="#">View post</a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/240x240" />
-            </div>
-            <div className={styles.rowContent}>
-              <div className={styles.rowText}>
-                <em className={styles.date}>2h ago</em>
-                <h2>My first post</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat...
-                </p>
-              </div>
-              <div className={styles.rowEnd}>
-                <label>
-                  Tags: Diabetes, Sugar, Research
-                </label>
-                <a href="#">View post</a>
-              </div>
-            </div>
-          </div>
-          <div className={styles.row}>
-            <div className={styles.rowPreview}>
-              <img src="http://via.placeholder.com/240x240" />
-            </div>
-            <div className={styles.rowContent}>
-              <div className={styles.rowText}>
-                <em className={styles.date}>2h ago</em>
-                <h2>My first post</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat...
-                </p>
-              </div>
-              <div className={styles.rowEnd}>
-                <label>
-                  Tags: Diabetes, Sugar, Research
-                </label>
-                <a href="#">View post</a>
-              </div>
-            </div>
-          </div>
+         <ConnectPost
+          preview="https://i.imgur.com/M7kVtUt.jpg"
+          title="Affects of sugar"
+          date="2h ago"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Diabetes, Sugar, Research"
+          author="James Howlett"
+          authorProfile="https://i.imgur.com/aQ6jlt3.jpg"
+         />
+         <ConnectPost
+          preview="https://i.imgur.com/ROgoVps.jpg"
+          title="Asthma in 2018"
+          date="4 days ago"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Asthma, 2018"
+          author="Jean Grey"
+          authorProfile="https://i.imgur.com/kYZZU68.jpg"
+         />
+         <ConnectPost
+          preview="https://i.imgur.com/xme4Vxc.jpg"
+          title="Your heart and you"
+          date="Last Week"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Cardiovasulcar, Stroke"
+          author="Scott Summers"
+          authorProfile="https://i.imgur.com/rRIgJfO.jpg"
+         />
+         <ConnectPost
+          preview="https://i.imgur.com/M7kVtUt.jpg"
+          title="Affects of sugar"
+          date="2h ago"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Diabetes, Sugar, Research"
+          author="James Howlett"
+          authorProfile="https://i.imgur.com/aQ6jlt3.jpg"
+         />
+         <ConnectPost
+          preview="https://i.imgur.com/ROgoVps.jpg"
+          title="Asthma in 2018"
+          date="4 days ago"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Asthma, 2018"
+          author="Jean Grey"
+          authorProfile="https://i.imgur.com/kYZZU68.jpg"
+         />
+         <ConnectPost
+          preview="https://i.imgur.com/xme4Vxc.jpg"
+          title="Your heart and you"
+          date="Last Week"
+          snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat..."
+          tags="Cardiovasulcar, Stroke"
+          author="Scott Summers"
+          authorProfile="https://i.imgur.com/rRIgJfO.jpg"
+         />
         </div>
         <div className={styles.postLoader}>
           <strong>Load more...</strong>
