@@ -25,23 +25,23 @@ export class ConnectPost extends React.Component<ConnectPostProps,ConnectPostSta
 
   render() {
     return (
-       <div className={styles.row}>
-        <div className={styles.rowPreview}>
+       <div className={styles.post}>
+        <div className={styles.preview}>
           <img src={this.props.preview} width="240" height="240" />
           <div className={styles.authorStrip}>
             <img src={this.props.authorProfile} height="41" width="41"/>
             <span>{this.props.author}</span>
           </div>
         </div>
-        <div className={styles.rowContent}>
-          <div className={styles.rowText}>
+        <div className={styles.content}>
+          <div className={styles.snippet}>
             <em className={styles.date}>{this.props.date}</em>
             <h2>{this.props.title}</h2>
             <p>
               {this.props.snippet}
             </p>
           </div>
-          <div className={styles.rowEnd}>
+          <div className={styles.postEnd}>
             <label>
               Tags: {this.props.tags}
             </label>

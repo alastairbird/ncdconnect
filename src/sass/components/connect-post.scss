@@ -3,18 +3,19 @@
 // ======================================================================
 @import "../base/settings";
 @import "../base/tools";
-$rowSize: 240px;
-.row {
+$postSize: 240px;
+.post {
 	width: 100%;
 	display: flex;
 	background: #fff;
 	margin-bottom: var(--gutter);
 	margin: 0 0 var(--gutter) var(--gutter);
+	box-shadow: var(--subtle-shadow);
 }
 
-.rowPreview {
-	width: $rowSize;
-	height: $rowSize;
+.preview {
+	width: $postSize;
+	height: $postSize;
 	overflow: hidden;
 	display: none;
 	position: relative;
@@ -39,7 +40,7 @@ $rowSize: 240px;
 }
 
 
-.rowContent {
+.content {
 	width: 100%;
 	height: auto;
 	padding: var(--gutter);
@@ -72,13 +73,13 @@ $rowSize: 240px;
 	font-size: var(--medium-font-size);
 }
 
-.rowText {
+.snippet {
 	height: auto;
 	position: relative;
 	padding-bottom: var(--gutter);
 }
 
-.rowEnd {
+.postEnd {
 	font-size: var(--medium-font-size);
 	display: block;
 
@@ -95,15 +96,15 @@ $rowSize: 240px;
 
 
 @include media("tablet-up") {
-  	.rowContent {
-		width: calc(100% - #{$rowSize});
-		height: $rowSize;
+  	.content {
+		width: calc(100% - #{$postSize});
+		height: $postSize;
 	}
-	.rowText {
+	.snippet {
 		height: 90%;
 		padding-bottom: 0;
 	}
-	.rowEnd {
+	.postEnd {
 		display: flex;
 		justify-content: space-between;
 
@@ -111,13 +112,13 @@ $rowSize: 240px;
 			width: auto;
 		}
 	}
-	.rowPreview {
+	.preview {
 		display: block;
 	}
 }
 
 @include media("laptop-up") {
-	.row {
+	.post {
 		width: calc(50% - var(--gutter));
 	}
 }
