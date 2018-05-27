@@ -29,10 +29,10 @@ class ProfileView extends React.Component {
                     e.preventDefault();
                     onSubmit({profile});
                 }}>
-                    <label for="name">Name: </label>
+                    <label htmlFor="name">Name: </label>
                     <input id="name" type="text" placeholder="Enter your name..." value={profile.name} onChange={this.updateProfile('name')}/>
 
-                    <label for="country">Country: </label>
+                    <label htmlFor="country">Country: </label>
                     <select id="country" name="country">
                         <option value="">Country...</option>
                         <option value="Afganistan">Afghanistan</option>
@@ -284,16 +284,16 @@ class ProfileView extends React.Component {
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
 
-                    <label for="email">Email: </label>
+                    <label htmlFor="email">Email: </label>
                     <input id="email" type="email" placeholder="Enter your email..." value={profile.email} onChange={this.updateProfile('email')}/>
 
-                    <label for="twitter">Twitter: </label>
+                    <label htmlFor="twitter">Twitter: </label>
                     <input id="twitter" type="text" placeholder="Enter your Twitter handle..." value={profile.twitter} onChange={this.updateProfile('twitter')}/>
 
-                    <label for="linkedin">LinkedIn: </label>
+                    <label htmlFor="linkedin">LinkedIn: </label>
                     <input id="linkedin" type="text" placeholder="Enter your linkedIn url..." value={profile.linkedin} onChange={this.updateProfile('linkedin')}/>
 
-                    <label for="affiliation">Affiliation: </label>
+                    <label htmlFor="affiliation">Affiliation: </label>
                     <select id="affiliation" name="affiliation">
                         <option value="None">None</option> 
                         <option value="Institution">Institution</option> 
@@ -317,13 +317,13 @@ class ProfileView extends React.Component {
                       </label>
                     </div>
 
-                    <label for="course">Course/programme: (only show if student)</label>
+                    <label htmlFor="course">Course/programme: (only show if student)</label>
                     <input id="course" type="text" placeholder="Enter your course..." value={profile.course} onChange={this.updateProfile('course')}/>
 
-                    <label for="position">Position: (only show if NOT a student)</label>
+                    <label htmlFor="position">Position: (only show if NOT a student)</label>
                     <input id="position" type="text" placeholder="Enter your position..." value={profile.position} onChange={this.updateProfile('position')}/>
 
-                    <label for="profilePic">Profile picture</label>
+                    <label htmlFor="profilePic">Profile picture</label>
                     <input id="profilePic" type="file" placeholder="Upload a picture..."/>
 
                     <h2>I'm interested in:</h2>
@@ -356,7 +356,7 @@ class ProfileView extends React.Component {
                     </div>
                     
                     <div className="form-group__base">
-                      <label for="research-activities">Research and activities in: </label>
+                      <label htmlFor="research-activities">Research and activities in: </label>
                       <select id="research-activities" name="research-activities">
                           <option value="--">--</option>
                           <option value="Afganistan">Afghanistan</option>
@@ -608,7 +608,7 @@ class ProfileView extends React.Component {
                           <option value="Zimbabwe">Zimbabwe</option>
                       </select>
 
-                      <label for="reasearch-institute">Research and activities at:</label>
+                      <label htmlFor="reasearch-institute">Research and activities at:</label>
                       <input id="reasearch-institute" type="text" placeholder="Enter an institution name..."/>
                     </div>
                     <div>
