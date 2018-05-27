@@ -5,7 +5,15 @@ import { ConnectPost } from '../components/ConnectPost.jsx';
 const styles = require('../../sass/components/connect.scss');
 import classNames from 'classnames';
 
-export class Connect extends React.Component {
+interface ConnectProps {
+
+}
+
+interface ConnectState {
+  
+}
+
+export class Connect extends React.Component<ConnectProps, ConnectState> {
 
   constructor(props) {
     super(props);
@@ -20,15 +28,23 @@ export class Connect extends React.Component {
         </div>
         <div className={styles.toolbar}>
           <div className={styles.toolbarFilters}>
-            <label className={classNames(styles.filter, styles.selectedFilter)}>All</label>
-            <label className={classNames(styles.filter)}>Individuals</label>
-            <label className={classNames(styles.filter)}>Topics</label>
-            <label className={classNames(styles.filter)}>Organisations</label>
-            <label className={classNames(styles.filter)}>Countries</label>
-            <label className={classNames(styles.filter)}>Course/programme</label>
+            <button className={classNames(styles.filter, styles.selectedFilter)}>All</button>
+            <button className={classNames(styles.filter)}>Individuals</button>
+            <button className={classNames(styles.filter)}>Topics</button>
+            <button className={classNames(styles.filter)}>Organisations</button>
+            <button className={classNames(styles.filter)}>Countries</button>
+            <button className={classNames(styles.filter)}>Course/programme</button>
           </div>
-          <div className={styles.filters}>
+          <div className={styles.order}>
+            <span>Order by</span>
+            <select className={styles.something}>
+              <option>Most recent</option>
+              <option>Most views</option>
+              <option>Most something</option>
+            </select>
           </div>
+        </div>
+        <div className={styles.filters}>
         </div>
         <div className={styles.posts}>
          <ConnectPost
@@ -70,7 +86,7 @@ export class Connect extends React.Component {
          <ConnectPost
           preview="https://i.imgur.com/M7kVtUt.jpg"
           title="Affects of sugar"
-          date="2h ago"
+          date="2 weeks ago"
           snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -82,7 +98,7 @@ export class Connect extends React.Component {
          <ConnectPost
           preview="https://i.imgur.com/ROgoVps.jpg"
           title="Asthma in 2018"
-          date="4 days ago"
+          date="3 weeks ago"
           snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -94,7 +110,7 @@ export class Connect extends React.Component {
          <ConnectPost
           preview="https://i.imgur.com/xme4Vxc.jpg"
           title="Your heart and you"
-          date="Last Week"
+          date="2 months ago"
           snippet="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

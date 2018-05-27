@@ -8,10 +8,18 @@ $postSize: 240px;
 	width: 100%;
 	display: flex;
 	background: #fff;
-	margin-bottom: var(--gutter);
-	margin: 0 0 var(--gutter) var(--gutter);
+	margin-bottom: calc(var(--gutter) *2);
+	margin: 0 0 calc(var(--gutter) *2) calc(var(--gutter) *2);
 	box-shadow: var(--subtle-shadow);
+	opacity: 1;
+	animation: fadeIn 0.3s ease-in;
 }
+
+@keyframes fadeIn {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
 
 .preview {
 	width: $postSize;
@@ -119,6 +127,6 @@ $postSize: 240px;
 
 @include media("laptop-up") {
 	.post {
-		width: calc(50% - var(--gutter));
+		width: calc(50% - calc(var(--gutter) *2));
 	}
 }
