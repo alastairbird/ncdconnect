@@ -58,6 +58,12 @@ $form-trim: 2px;
 		}
 	}
 
+	input[type="radio"] {
+		display: inline-block;
+		width: auto;
+		margin-right: calc(var(--gutter) / 2);
+	}
+
 	h2 {
 		margin-top: calc(var(--gutter) * 3);
 	}
@@ -65,4 +71,11 @@ $form-trim: 2px;
 
 .form-group {
 	margin-bottom: var(--gutter);
+}
+
+.form-radio-inline {
+	label {
+		display: inline-block;
+		margin-right: var(--gutter);
+	}
 }

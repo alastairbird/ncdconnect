@@ -29,10 +29,10 @@ class ProfileView extends React.Component {
                     e.preventDefault();
                     onSubmit({profile});
                 }}>
-                    <label htmlFor="name">Name: </label>
+                    <label htmlFor="name">Name </label>
                     <input id="name" type="text" placeholder="Enter your name..." value={profile.name} onChange={this.updateProfile('name')}/>
 
-                    <label htmlFor="country">Country: </label>
+                    <label htmlFor="country">Country </label>
                     <select id="country" name="country">
                         <option value="">Country...</option>
                         <option value="Afganistan">Afghanistan</option>
@@ -284,49 +284,41 @@ class ProfileView extends React.Component {
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
 
-                    <label htmlFor="email">Email: </label>
+                    <label htmlFor="email">Email </label>
                     <input id="email" type="email" placeholder="Enter your email..." value={profile.email} onChange={this.updateProfile('email')}/>
 
-                    <label htmlFor="twitter">Twitter: </label>
+                    <label htmlFor="twitter">Twitter </label>
                     <input id="twitter" type="text" placeholder="Enter your Twitter handle..." value={profile.twitter} onChange={this.updateProfile('twitter')}/>
 
-                    <label htmlFor="linkedin">LinkedIn: </label>
+                    <label htmlFor="linkedin">LinkedIn </label>
                     <input id="linkedin" type="text" placeholder="Enter your linkedIn url..." value={profile.linkedin} onChange={this.updateProfile('linkedin')}/>
 
-                    <label htmlFor="affiliation">Affiliation: </label>
+                    <label htmlFor="affiliation">Affiliation </label>
                     <select id="affiliation" name="affiliation">
                         <option value="None">None</option> 
                         <option value="Institution">Institution</option> 
                         <option value="Organisation">Organisation</option> 
                     </select>
-
-                    <div>
-                        <h2>Topics</h2>
-                    </div>
                     <div className="form-group__base">
                       <label>
                           Are you a student?
                       </label>
-                      <label>
-                          <input id="isStudent" type="checkbox"/>
-                          Yes, I'm a student
-                      </label>
-                      <label>
-                          <input id="isNotStudent" type="checkbox"/>
-                          Nope, I'm not a student
-                      </label>
+                      <div className="form-radio-inline__base">
+                        <label><input id="isStudent" name="areTheyAStudent"  type="radio"/>Yes</label>
+                        <label><input id="isNotStudent" name="areTheyAStudent"  type="radio"/>Nope</label>
+                      </div>
                     </div>
 
-                    <label htmlFor="course">Course/programme: (only show if student)</label>
+                    <label htmlFor="course">Course/programme (only show if student)</label>
                     <input id="course" type="text" placeholder="Enter your course..." value={profile.course} onChange={this.updateProfile('course')}/>
 
-                    <label htmlFor="position">Position: (only show if NOT a student)</label>
+                    <label htmlFor="position">Position (only show if NOT a student)</label>
                     <input id="position" type="text" placeholder="Enter your position..." value={profile.position} onChange={this.updateProfile('position')}/>
 
                     <label htmlFor="profilePic">Profile picture</label>
                     <input id="profilePic" type="file" placeholder="Upload a picture..."/>
 
-                    <h2>I'm interested in:</h2>
+                    <h2>I'm interested in</h2>
                     <label><input id="Cancer" name="interest-cancer"type="checkbox"/>Cancer</label>
                     <label><input id="Type 1 diabetes" name="interest-Type 1 diabetes" type="checkbox"/>Type 1 diabetes</label>
                     <label><input id="Type 2 diabetes" name="interest-Type 2 diabetes" type="checkbox"/>Type 2 diabetes</label>
