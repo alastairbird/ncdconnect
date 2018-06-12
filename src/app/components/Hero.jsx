@@ -37,26 +37,14 @@ export class Hero extends React.Component {
         	<li className={styles.ctaBlock}>
         		<img className={styles.ctaIcon} src={chatSrc} alt="" />
         		<h2 className={styles.subHeadOne}>Connect</h2>
-        		<p>
-        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore.
-        		</p>
         	</li>
         	<li className={styles.ctaBlock}>
         		<img className={styles.ctaIcon} src={newsSrc} alt="" />
         		<h2 className={styles.subHeadTwo}>Opportunities</h2>
-        		<p>
-        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore.
-        		</p>
         	</li>
         	<li className={styles.ctaBlock}>
         		<img className={styles.ctaIcon} src={calSrc} alt="" />
         		<h2 className={styles.subHeadThree}>Events</h2>
-        		<p>
-        			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore.
-        		</p>
         	</li>
         </ul>
       </div>
